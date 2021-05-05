@@ -7,7 +7,7 @@ app.use(bodyParser.urlencoded({extended: true}))
 
 app.set('view engine', 'ejs');
 
-mongoose.connect("mongodb://localhost:27017/flights",{useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect("mongodb+srv://nls-admin:database123@senapcluster.z540e.mongodb.net/flights",{useNewUrlParser: true, useUnifiedTopology: true });
 
 const db = mongoose.connection;
 
