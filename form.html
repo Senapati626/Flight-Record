@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book My Flight</title>
+</head>
+<style>
+  body{
+    background: url('https://wallpaperaccess.com/full/2248344.jpg') no-repeat;
+    background-size: cover;
+    padding: 2em;
+    font-size: 20px;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .container{
+    width: 100%;
+    background-color: rgba(0,0,0,0.9);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  h1{
+    color: rgb(248, 74, 248);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  form{
+    background: #fcfbbf;
+    max-width: 700px;
+    display: grid;
+    padding: 2em;
+    box-shadow: 5px 10px rgba(39, 39, 39, 0.7);
+    border-radius: 15px;
+  }
+  .right,.left{
+    display:flex;
+    flex-direction: column;
+    align-items: space-around;
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+  }
+  .input{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    width: 100%;
+  }
+  .radios{
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin: 1em 0;
+   gap: 10px;
+  }
+  .radios p{
+    justify-self: flex-start;
+  }
+  .radios div:nth-child(2){
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+  }
+  button{
+    justify-self: center;
+    width: fit-content;
+    margin-top: 10px;
+    font-size: 1em;
+    border: none;
+    background: #6fcb95;
+    padding: 0.5em 1.2em;
+    border-radius: 12px;
+    cursor: pointer;
+  }
+  button:hover{
+    border-bottom: 2px solid rgb(47, 110, 247);
+  }
+  input[type="text"],input[type="text"]:focus{
+    border: none;
+    background: transparent;
+    border-bottom: 2px solid tomato;
+    color: black;
+    outline: none;
+    font-size: 20px;
+    padding: 0 1em;
+    width: 260px;
+  }
+</style>
+<body>
+  <div class="container">
+    <h1>Book My Flights</h1>
+    <form method="POST" autocomplete="off">
+      <div class="left">
+      <div class="input">
+      <p>First Name</p>
+      <input type="text" name="first_name" required>
+      </div>
+      <div class="input">
+      <p>Last Name</p>
+      <input type="text" name="last_name" required>
+      </div>
+      </div>
+      <div class="radios">
+        <div>
+          <p>Trip</p>
+        </div>
+        <div>
+          <div>
+            <input type="radio" name="trip_type" value="one-way" checked>
+            <label>One Way</label>
+          </div>
+          <div>
+            <input type="radio" name="trip_type" value="round-trip">
+            <label>Round Trip</label>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="input">
+          <p>Origin</p>
+          <input type="text" name="origin" required>
+        </div>
+        <div class="input">
+          <p>Destination</p>
+          <input type="text" name="destination" required>
+        </div>
+      </div>
+      <button>Submit</button>
+    </form>
+  </div>
+  
+</body>
+</html>
