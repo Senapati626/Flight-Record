@@ -46,6 +46,6 @@ app.post("/", (req,res)=>{
 
 })
 
-app.listen(3005, () => {
+app.listen(process.env.PORT || 3001, () => {
     console.log('app is running.')
 } )
