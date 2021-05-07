@@ -23,7 +23,8 @@ const flightsSchema = {
 
 const Flight = mongoose.model('posts', flightsSchema);
 app.get("/", (req,res)=>{
-    res.sendFile(__dirname + '/form.html');
+    //res.sendFile(__dirname + '/form.html');
+    res.send('its working')
 })
 app.get("/done", (req,res)=>{
     Flight.find({},(err,flights)=>{
