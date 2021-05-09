@@ -3,24 +3,30 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background: #0e0e0e;
 }
 h2{
+    color: whitesmoke;
+}
+.header{
     position: absolute;
     top: 0;
-    left: 0;
-    margin: 30px;
-    color: whitesmoke;
+    width: 100%;
+    height: 8vh;
+    background-color: teal;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1em;
 }
 .wrapper{
     display: flex;
     width: 100%;
-    margin-top: 10vh;
-    min-height: 80vh;
+    min-height: 100vh;
     justify-content: center;
     align-items: center;
     padding: 0 2em;
     font-size: 18px;
+    background-color: #0e0e0e;
 
 }
 table{
@@ -52,13 +58,6 @@ th{
 }
 input{
     background-color: wheat;
-}
-.buttonAdd{
-    position: absolute;
-    margin: 30px;
-    top: 0;
-    right: 0;
-    font-size: 20px;
 }
 .buttonAdd button{
     text-decoration: none;

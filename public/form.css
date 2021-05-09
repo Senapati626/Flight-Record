@@ -79,7 +79,14 @@ body{
     border-bottom: 2px solid tomato;
     color: black;
     outline: none;
-    font-size: 20px;
     padding: 0 1em;
-    width: 260px;
+  }
+
+  @media screen and (max-width: 400px) {
+    .input,.radios{
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+    }
+    
   }

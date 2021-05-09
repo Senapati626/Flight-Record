@@ -8,7 +8,16 @@
     <link rel="stylesheet" href="/index.css">
 </head>
 <body>
-    <h2>Flight Records</h2>
+    <div class="header">
+        <div>
+            <h2>Flight Records</h2>
+        </div>
+        <div class="buttonAdd">
+            <form action="/add" method="GET">
+                <button>Add Record +</button>
+            </form>
+        </div>
+    </div>
     <div class="wrapper">
         <table>
             <tr>
@@ -23,15 +32,10 @@
                 <td><%= flight.trip_type %></td>
                 <td><%= flight.origin %></td>
                 <td><%= flight.destination %></td>
-                <td style="background-color: transparent;"><button class="buttonDelete" value='<%= flight.origin%>'id="delete">X</button></td>
+                <td style="background-color: transparent;"><button class="buttonDelete" value='<%= flight._id%>' id="delete">X</button></td>
             </tr>
     <%})%>
         </table>
-    </div>
-    <div class="buttonAdd">
-        <form action="/add" method="GET">
-            <button>Add Record +</button>
-        </form>
     </div>
     <script src="/main.js">
     </script>

@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoClient = require('mongodb').MongoClient
+const ObjectId = require('mongodb').ObjectID
 const mongoose = require('mongoose');
 const { render } = require('ejs');
 const app = express();
@@ -42,7 +43,7 @@ mongoClient.connect(connectionString,{useNewUrlParser: true, useUnifiedTopology:
         })
         app.delete('/delete', (req,res)=>{
             collectionName.remove(
-                {origin: req.body.key}
+                {_id: new ObjectId(req.body.key)}
             )
             .then(result => {
                 res.redirect('/')
