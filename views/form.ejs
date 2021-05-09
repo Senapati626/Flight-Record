@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book My Flight</title>
+    <link rel="stylesheet" href="/form.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Book My Flights</h1>
+    <form method="POST" autocomplete="off">
+      <div class="left">
+      <div class="input">
+      <p>First Name</p>
+      <input type="text" name="first_name" required>
+      </div>
+      <div class="input">
+      <p>Last Name</p>
+      <input type="text" name="last_name" required>
+      </div>
+      </div>
+      <div class="radios">
+        <div>
+          <p>Trip</p>
+        </div>
+        <div>
+          <div>
+            <input type="radio" name="trip_type" value="one-way" checked>
+            <label>One Way</label>
+          </div>
+          <div>
+            <input type="radio" name="trip_type" value="round-trip">
+            <label>Round Trip</label>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="input">
+          <p>Origin</p>
+          <input type="text" name="origin" required>
+        </div>
+        <div class="input">
+          <p>Destination</p>
+          <input type="text" name="destination" required>
+        </div>
+      </div>
+      <button>Submit</button>
+    </form>
+  </div>
+  
+</body>
+</html>

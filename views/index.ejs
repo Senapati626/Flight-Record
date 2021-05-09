@@ -5,76 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flight Records</title>
+    <link rel="stylesheet" href="/index.css">
 </head>
-<style>
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        background: #0e0e0e;
-    }
-    h2{
-        position: absolute;
-        top: 0;
-        left: 0;
-        margin: 30px;
-        color: whitesmoke;
-    }
-    .wrapper{
-        display: flex;
-        width: 100%;
-        margin-top: 10vh;
-        min-height: 90vh;
-        justify-content: center;
-        align-items: center;
-        padding: 0 2em;
-        font-size: 2.2vw;
-    }
-    table{
-        width: 100%;
-        padding: 0 2em;
-        border-collapse: collapse;
-        border: 1px solid grey;
-        border-radius: 10px;
-    }
-    tr{
-        text-transform: uppercase;
-        border-bottom: 1px solid rgb(21, 36, 30);
-        white-space: wrap;
-    }
-    td{
-        border-right: 0 2px solid #dddddd;
-        text-align: left;
-        padding: 8px 16px;
-        background-color: rgb(248, 235, 211);
-    }
-    td:nth-child(even){
-        background-color: rgb(250, 221, 177);
-    }
-    th{
-        text-transform: uppercase;
-        text-align: center;
-        padding: 8px 15px;
-        background-color: teal;
-        color: white;
-    }
-    .button{
-        position: absolute;
-        margin: 30px;
-        top: 0;
-        right: 0;
-        font-size: 20px;
-    }
-    .button a{
-        text-decoration: none;
-        background-color: #2d9661;
-        color: white;
-        border-radius: 12px;
-        padding: 0.5em 1.2em;
-        cursor: pointer;
-    }
-</style>
 <body>
     <h2>Flight Records</h2>
     <div class="wrapper">
@@ -91,12 +23,17 @@
                 <td><%= flight.trip_type %></td>
                 <td><%= flight.origin %></td>
                 <td><%= flight.destination %></td>
+                <td style="background-color: transparent;"><button class="buttonDelete" value='<%= flight.origin%>'id="delete">X</button></td>
             </tr>
     <%})%>
         </table>
     </div>
-    <div class="button">
-        <a href="http://localhost:3005">Add Record +</a>
+    <div class="buttonAdd">
+        <form action="/add" method="GET">
+            <button>Add Record +</button>
+        </form>
     </div>
+    <script src="/main.js">
+    </script>
 </body>
 </html> 
