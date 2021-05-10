@@ -61,6 +61,8 @@ td div{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    width: 100%;
+    position: relative;
 }
 td:nth-child(even){
     background-color: rgb(250, 221, 177);
@@ -98,7 +100,8 @@ td p{
     align-items: center;
     cursor: pointer;
     margin-left: 0.5em;
-    justify-self: flex-end;
+    position: absolute;
+    right: 0;
 }
 @media screen and (max-width: 550px) {
     .wrapper{
