@@ -2,10 +2,20 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: sans-serif;
 }
 h2{
     color: whitesmoke;
+}
+h3{
+    font-size: 2.8em;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+}
+body{
+    background: url('https://wallpaperaccess.com/full/2248344.jpg') no-repeat;
+    background-size: cover;
 }
 .header{
     position: absolute;
@@ -19,21 +29,22 @@ h2{
     padding: 0 1em;
 }
 .wrapper{
-    display: flex;
+    display: grid;
     width: 100%;
     min-height: 100vh;
-    justify-content: center;
-    align-items: center;
+    place-items: center;
     padding: 0 2em;
-    font-size: 18px;
-    background-color: #0e0e0e;
+    background: rgba(14, 14, 14,0.85);
+    overflow: hidden;
 
-}
+ }
+ 
 table{
+    max-width: 100%;
     padding: 0 2em;
     border-collapse: collapse;
-    border: 1px solid grey;
     border-radius: 10px;
+    font-size: 16px;
 }
 tr{
     border-bottom: 1px solid rgb(21, 36, 30);
@@ -42,9 +53,14 @@ tr{
 }
 td{
     border-right: 0 2px solid #dddddd;
-    text-align: left;
+    text-align: center;
     padding: 8px 16px;
-    background-color: rgb(248, 235, 211);
+    background-color: thistle;
+}
+td div{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }
 td:nth-child(even){
     background-color: rgb(250, 221, 177);
@@ -52,30 +68,51 @@ td:nth-child(even){
 th{
     text-transform: uppercase;
     text-align: center;
-    padding: 8px 15px;
+    padding: 8px 16px;
     background-color: teal;
     color: white;
+    font-size: 1.1em;
 }
-input{
-    background-color: wheat;
+td p{
+    word-break: break-all;
 }
 .buttonAdd button{
     text-decoration: none;
-    background-color: #2d9661;
+    background-color: transparent;
     color: white;
-    border-radius: 12px;
+    border: 2px solid white;
     padding: 0.5em 1.2em;
     cursor: pointer;
+    font-size: 16px;
+    white-space: nowrap;
 }
 .buttonDelete{
-    background-color: rgb(40, 245, 149);
-    font-size: 18px;
-    border-radius: 50%;
-    width: 28px;
-    font-size: 20px;
-    height: 100%;
+    background-color: rgb(245, 50, 24);
+    padding: 0 0.5em;
+    color: white;
+    font-size: 14px;
+    border: none;
+    border-radius: 35%;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    margin-left: 0.5em;
+    justify-self: flex-end;
+}
+@media screen and (max-width: 550px) {
+    .wrapper{
+        padding: 0 0.5em;
+    }
+    table{
+        font-size: 10px;
+    }
+    td,tr{
+        padding: 5px 0.5px;
+    }
+}
+@media screen and (max-width: 350px) {
+    td div{
+        flex-direction: column;
+    }
 }

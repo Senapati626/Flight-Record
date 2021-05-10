@@ -20,23 +20,28 @@
     </div>
     <div class="wrapper">
         <table>
+            <%if (userFlight.length == 0){%><h3>No Records found</h3><% } else{%>
             <tr>
                 <th>Passenger</th>
                 <th>Trip Type</th>
                 <th>Origin</th>
                 <th>destination</th>
             </tr>
-    <%userFlight.forEach(flight => {%> 
+            <%for(let i=0; i<userFlight.length; i++){%> 
             <tr>
-                <td><%= flight.first_name + " " + flight.last_name %></td>
-                <td><%= flight.trip_type %></td>
-                <td><%= flight.origin %></td>
-                <td><%= flight.destination %></td>
-                <td style="background-color: transparent;"><button class="buttonDelete" value='<%= flight._id%>' id="delete">X</button></td>
+                <td><p><%= userFlight[i].first_name + " " + userFlight[i].last_name %></p></td>
+                <td><p><%= userFlight[i].trip_type %></p></td>
+                <td><p><%= userFlight[i].origin %></p></td>
+                <td>
+                    <div>
+                        <p><%= userFlight[i].destination %></p>
+                        <button class="buttonDelete" value='<%= userFlight[i]._id%>' id="delete">X</button>
+                    </div>
+                </td>
             </tr>
-    <%})%>
+        <% }} %>       
         </table>
-    </div>
+    </div> 
     <script src="/main.js">
     </script>
 </body>
