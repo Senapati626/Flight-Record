@@ -8,7 +8,7 @@ const app = express();
 
 
 //setting up dbms
-connectionString = "mongodb+srv://nls-admin:database123@senapcluster.z540e.mongodb.net/flights";
+connectionString = "YOUR OWN MONGODB DATABASE/flights";
 mongoClient.connect(connectionString,{useNewUrlParser: true, useUnifiedTopology: true })
     .then(client => {
         console.log('established connection with database')
